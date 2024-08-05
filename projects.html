@@ -6,34 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details</title>
     
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 	
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="projects.css">
 </head>
 <body>
     <header class="header_area">
 		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
+			<nav class="navbar">
 				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html">
-						<img src="logo.jpg" alt="Logo">
+					<a class="navbar-brand" href="index.html">
+						<p>DINESH</p>
 					</a>
-					<!-- Navbar toggler for mobile -->
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-							aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-						<ul class="navbar-nav menu_nav">
-							<li class="nav-item active"><a class="nav-link" href="index">Home</a></li>
+					<div class="nav-items">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 							<li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
 							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
 					</div>
 				</div>
 			</nav>
@@ -41,21 +29,25 @@
 	</header>
 	
     <div id="projects-container">
-        <h1>Projects Overview</h1>
+        <h1 class="heading">Projects Overview</h1>
         <div class="projects">
-            <h2 onclick="toggleDetail('project1')">Car Popularity Prediction: A Machine Learning</h2>
-            <div id="project1" class="project-detail">
-                <p>Name of the project is  Car Popularity Prediction: A Machine Learning Approach. in this project we used 
-					machine learning algorithms to predict car popularity. we used supervised learning algorithm which has both the 
-					input features and correct outputs. the input features contain the car features like number of doors, seating capacity, 
-					boot space etc.  </p>
-                <a href="https://github.com/username/project1">View on GitHub</a>
-            </div>
-			<h2 onclick="toggleDetail('project2')">MY Portfolio</h2>
-            <div id="project2" class="project-detail">
-                <p>Developed a comprehensive portfolio website to showcase my projects, skills, and achievements. </p>
-                <a href="https://dineshportfolio-agiledineshreddys-projects.vercel.app/">website link</a>
-            </div>
+			<div class="project1 project">
+            	<h2 onclick="toggleDetail('project1')">Car Popularity Prediction: A Machine Learning</h2>
+            	<div id="project1" class="project-detail hid">
+               		 <p>Name of the project is  Car Popularity Prediction: A Machine Learning Approach. in this project we used 
+						machine learning algorithms to predict car popularity. we used supervised learning algorithm which has both the 
+						input features and correct outputs. the input features contain the car features like number of doors, seating capacity, 
+						boot space etc.  </p>
+               			 <a href="https://github.com/username/project1">View on GitHub</a>
+           		 </div>
+			</div>
+			<div class="project2 project">
+				<h2 onclick="toggleDetail('project2')">MY Portfolio</h2>
+            	<div id="project2" class="project-detail hid">
+               		 <p>Developed a comprehensive portfolio website to showcase my projects, skills, and achievements. </p>
+               		 <a href="https://dineshportfolio-agiledineshreddys-projects.vercel.app/">website link</a>
+           		 </div>
+	 		</div>
         </div>
     </div>
 

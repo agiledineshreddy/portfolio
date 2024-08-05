@@ -1,71 +1,63 @@
-.navbar {
-  background-color: #3498db; /* Blue color */
-}/* Basic Reset */
-body, h1, h2, ul, p {
+body, html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  padding: 20px;
-  background-color: #f4f4f4; /* Light grey background for the body */
+.navbar{
+  width: 100%;
+  height: 80px;
+  background-color: rgb(114, 18, 114);
+  border-radius: 15px;
+  
 }
-
-header {
-  background-color: #3498db; /* Blue color for the header */
-  color: #fff;
-  padding: 10px 0;
-}
-
-header .navbar {
-  padding: 0 20px;
-}
-
-header nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-header nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-header nav ul li a {
-  color: #fff;
+.navbar-brand {
+  font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
+  color: antiquewhite;
+  position: relative;
+  left: 40px;
+  font-size: 1.5rem;
+}
+.home_banner_area{
+  background-color: rgb(125, 174, 174);
+}
+.container{
+  display: flex;
+  
+  justify-content: space-between;
   padding: 10px;
+  max-width: 1200px;
+  align-items: center;
 }
-
-header .navbar-brand {
-  color: #fff;
+.nav-items{
+  display: flex; 
+  text-decoration: none; 
+  list-style: none;
+  gap: 30px;
+  text-decoration: none;
 }
-
-header .navbar-toggler {
-  background-color: #fff;
+.nav-items li a{
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  color: aliceblue;
 }
-
-section {
-  margin-top: 20px;
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
-  background-color: #fff; /* Ensures content sections are clearly visible against the body background */
+.nav-items li a::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: red;
+  transition: 0.15s ease-in-out;
 }
-
-footer {
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-  background-color: #333;
-  color: white;
+.nav-items li a:hover::after{
+  width: 100%;
 }
+.heading{
+  background-color: aquamarine;
+  border-top: 20px;
 
-a {
-  color: #00f;
-}
-
-a:hover {
-  color: #3498db; /* Match hover state to header color */
 }

@@ -1,59 +1,88 @@
-/* Prevent horizontal scrolling for the entire page */
-body {
+body, html {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
-/* Navigation Bar Background Color */
-.navbar {
-  background-color: #3498db; /* Blue color */
-}
 
-/* Body Background Color */
-.index{
-  background-color: #ecf0f1; /* Light grey color */
+.navbar{
+  width: 100%;
+  height: 80px;
+  background-color: rgb(114, 18, 114);
+  border-radius: 15px;
+  
 }
-
-
-/* If the issue is caused by a specific container, adjust its width */
-.container.index {
-  max-width: 100%; /* Ensures the container doesn't exceed the viewport width */
+.navbar-brand {
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  color: antiquewhite;
+  position: relative;
+  left: 40px;
+  font-size: 1.5rem;
 }
-.banner_inner .banner_content {
-  margin-bottom: 80px; /* Decrease the bottom margin as needed */
+.home_banner_area{
+  background-color: rgb(125, 174, 174);
 }
-
-
-.home_banner_area {
-  margin-top: 90px; /* Adjust the value as needed */
+.container{
+  display: flex;
+  
+  justify-content: space-between;
+  padding: 10px;
+  max-width: 1200px;
+  align-items: center;
 }
-/* Style the "Hire Me" button with light blue color */
-.primary_btn {
-  background-color: #7ebcff; /* Light blue color */
-  color: #fff; /* White text color */
-  padding: 10px 20px; /* Adjust padding as needed */
-  border-radius: 5px; /* Add rounded corners */
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
-  margin-right: 10px; /* Add right margin for spacing between buttons */
+.nav-items{
+  display: flex; 
+  text-decoration: none; 
+  list-style: none;
+  gap: 30px;
+  text-decoration: none;
 }
-
-/* Style the "Get CV" button with a darker shade of light blue */
-.primary_btn.tr-bg {
-  background-color: #5ea4e2; /* Darker shade of light blue */
-  color: #fff; /* White text color */
-  padding: 10px 20px; /* Adjust padding as needed */
-  border-radius: 5px; /* Add rounded corners */
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+.nav-items li a{
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  color: aliceblue;
 }
-
-/* Add hover effect to both buttons */
-.primary_btn:hover, .primary_btn.tr-bg:hover {
-  background-color: #5e9ad3; /* Darker shade on hover */
+.nav-items li a::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: red;
+  transition: 0.15s ease-in-out;
 }
+.nav-items li a:hover::after{
+  width: 100%;
+}
+.row{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+}
+.banner_content{
+  width: 50%;
+  font-size: 1.5rem;
+}
+.primary_btn{
+  position: relative;
+  top: 50px;
+  left: 30%;
+  padding: 15px 20px;
+  background-color: blue;
+  color: aliceblue;
+  text-decoration: none;
+  border-radius: 10px;
 
-body.index {
-  font-family: Arial, sans-serif; /* Use a common font for better compatibility */
-  background-color: #f0f0f0; /* Set a light background color */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+}
+.primary_btn:hover{
+  background-color: blueviolet;
+}
+.home_right_img{
+  width: 50%;
+}
+.about_area{
+  background-color: bisque;
 }
