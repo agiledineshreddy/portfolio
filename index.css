@@ -4,13 +4,14 @@ body, html {
   overflow-x: hidden;
 }
 
-.navbar{
+.navbar {
   width: 100%;
   height: 80px;
   background-color: rgb(114, 18, 114);
-  border-radius: 15px;
-  
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
+
 .navbar-brand {
   font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
@@ -19,43 +20,29 @@ body, html {
   left: 40px;
   font-size: 1.5rem;
 }
-.home_banner_area{
+
+.nav-items1 {
+  display: none;
+}
+
+.home_banner_area {
   background-color: rgb(125, 174, 174);
 }
-.container{
+
+.container {
   display: flex;
-  
   justify-content: space-between;
   padding: 10px;
   max-width: 1200px;
   align-items: center;
 }
-.nav-items{
-  display: flex; 
-  text-decoration: none; 
-  list-style: none;
-  gap: 30px;
-  text-decoration: none;
+
+.heading {
+  background-color: aquamarine;
+  border-top: 20px;
 }
-.nav-items li a{
-  text-decoration: none;
-  transition: 0.15s ease-in-out;
-  position: relative;
-  color: aliceblue;
-}
-.nav-items li a::after{
-  content: "";
-  position: absolute;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  background-color: red;
-  transition: 0.15s ease-in-out;
-}
-.nav-items li a:hover::after{
-  width: 100%;
-}
+
+
 .row{
   position: relative;
   padding: 20px;
@@ -85,4 +72,131 @@ body, html {
 }
 .about_area{
   background-color: bisque;
+}
+
+@media screen and (min-width: 610px) {
+  .nav-items1 {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 30px;
+  }
+
+  .nav-items1 li a {
+    text-decoration: none;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    color: aliceblue;
+  }
+
+  .nav-items1 li a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: red;
+    transition: 0.15s ease-in-out;
+  }
+
+  .nav-items1 li a:hover::after {
+    width: 100%;
+  }
+
+  .btn-b {
+    display: none;
+  }
+
+  .nav-items2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .nav-items2 {
+    display: none;
+  }
+
+  .btn-b {
+    position: relative;
+    border: 0;
+    padding: 0;
+    width: 40px;
+    height: 25px;
+    margin: 0;
+    background: none;
+  }
+
+  .btn-b .btn-br,
+  .btn-b::after,
+  .btn-b::before {
+    content: " ";
+    display: block;
+    margin: 3px 0;
+    width: 100%;
+    background-color: brown;
+    height: 4px;
+    transition: 0.4s;
+  }
+
+  .btn-b.isactive::after {
+    transform: rotate(-45deg) translate(2px, -4px);
+    width: 80%;
+  }
+
+  .btn-b.isactive::before {
+    transform: rotate(45deg) translate(1px, 4px);
+    width: 80%;
+  }
+
+  .btn-b.isactive .btn-br {
+    display: none;
+  }
+
+  .nav-items2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(114, 18, 114);
+    transition: 0.4s;
+    list-style: none;
+    z-index: 1000;
+  }
+
+  .nav-items2.isactive {
+    right: 0;
+  }
+
+  .nav-items2 li {
+    margin: 20px 0;
+  }
+
+  .nav-items2 li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 15px 10px;
+    position: relative;
+  }
+
+  .nav-items2 li a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: red;
+    transition: 0.15s ease-in-out;
+  }
+
+  .nav-items2 li a:hover::after {
+    width: 100%;
+  }
 }
